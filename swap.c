@@ -6,7 +6,7 @@
 /*   By: zait-hmi <zait-hmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:20:49 by zait-hmi          #+#    #+#             */
-/*   Updated: 2025/04/07 20:20:52 by zait-hmi         ###   ########.fr       */
+/*   Updated: 2025/04/07 23:24:55 by zait-hmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ void	sa(t_stack_node	**a, t_bool print)
 {
 	swap(a);
 	if (!print)
-		printf("sa\n");
+		write(1, "sa\n", 3);
 }
 
 void	sb(t_stack_node **b, t_bool print)
 {
 	swap(b);
 	if (!print)
-		printf("sb\n");
+		write(1, "sb\n", 3);
 }
 
 void	ss(t_stack_node **a, t_stack_node **b, t_bool print)
@@ -44,5 +44,5 @@ void	ss(t_stack_node **a, t_stack_node **b, t_bool print)
 	swap(a);
 	swap(b);
 	if (!print)
-		printf("ss\n");
+		write(1, "ss\n", 3);
 }

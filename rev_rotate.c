@@ -6,7 +6,7 @@
 /*   By: zait-hmi <zait-hmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:18:43 by zait-hmi          #+#    #+#             */
-/*   Updated: 2025/04/07 21:55:12 by zait-hmi         ###   ########.fr       */
+/*   Updated: 2025/04/07 23:24:29 by zait-hmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ void	rra(t_stack_node **a, t_bool print)
 {
 	rev_rotate(a);
 	if (!print)
-		printf("rra\n");
+		write(1, "rra\n", 4);
 }
 
 void	rrb(t_stack_node **b, t_bool print)
 {
 	rev_rotate(b);
 	if (!print)
-		printf("rrb\n");
+		write(1, "rrb\n", 4);
 }
 
 void	rrr(t_stack_node **a, t_stack_node **b, t_bool print)
@@ -47,5 +47,5 @@ void	rrr(t_stack_node **a, t_stack_node **b, t_bool print)
 	rev_rotate(a);
 	rev_rotate(b);
 	if (!print)
-		printf("rrr\n");
+		write(1, "rrr\n", 4);
 }

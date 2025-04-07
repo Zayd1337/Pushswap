@@ -6,17 +6,14 @@
 /*   By: zait-hmi <zait-hmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:34:03 by zait-hmi          #+#    #+#             */
-/*   Updated: 2025/04/07 20:34:06 by zait-hmi         ###   ########.fr       */
+/*   Updated: 2025/04/07 23:25:50 by zait-hmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-//# include <stdbool.h> //To use t_bool flags, e.g, to print or not to print
-# include <limits.h> //To define MIN and MAX macros
+# include <limits.h>
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
@@ -39,25 +36,19 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
-//***Utility Functions
 int				ft_isdigit(int c);
 void			min_on_top(t_stack_node **a);
 
-//***Handle errors
 int				error_syntax(char *str_n);
 int				error_duplicate(t_stack_node *a, int n);
 void			free_stack(t_stack_node **stack);
-//void			free_errors(t_stack_node **a);
 void			free_errors(t_stack_node **stack, char ***split_res);
 void			free_split_result(char **result_array);
 int				is_only_spaces(char *str);
 
-//***Stack initiation
-//void			init_stack_a(t_stack_node **a, char **argv);
 void			init_stack_a(t_stack_node **a, char **argv, char ***split_res);
 char			**split(char *s, char c);
 
-//***Nodes initiation
 void			init_nodes_a(t_stack_node *a, t_stack_node *b);
 void			init_nodes_b(t_stack_node *a, t_stack_node *b);
 void			current_index(t_stack_node *stack);
@@ -65,14 +56,12 @@ void			set_cheapest(t_stack_node *stack);
 t_stack_node	*get_cheapest(t_stack_node *stack);
 void			prep_for_push(t_stack_node **s, t_stack_node *n, char c);
 
-//***Stack utils
 int				stack_len(t_stack_node *stack);
 t_stack_node	*find_last(t_stack_node *stack);
 t_bool			stack_sorted(t_stack_node *stack);
 t_stack_node	*find_min(t_stack_node *stack);
 t_stack_node	*find_max(t_stack_node *stack);
 
-//***Commands
 void			sa(t_stack_node **a, t_bool print);
 void			sb(t_stack_node **b, t_bool print);
 void			ss(t_stack_node **a, t_stack_node **b, t_bool print);
@@ -85,7 +74,6 @@ void			rrr(t_stack_node **a, t_stack_node **b, t_bool print);
 void			pa(t_stack_node **a, t_stack_node **b, t_bool print);
 void			pb(t_stack_node **b, t_stack_node **a, t_bool print);
 
-//***Algorithm
 void			sort_three(t_stack_node **a);
 void			sort_stacks(t_stack_node **a, t_stack_node **b);
 

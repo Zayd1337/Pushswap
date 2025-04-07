@@ -6,7 +6,7 @@
 /*   By: zait-hmi <zait-hmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:18:38 by zait-hmi          #+#    #+#             */
-/*   Updated: 2025/04/07 21:55:06 by zait-hmi         ###   ########.fr       */
+/*   Updated: 2025/04/07 23:24:15 by zait-hmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ void	pa(t_stack_node **a, t_stack_node **b, t_bool print)
 {
 	push(a, b);
 	if (!print)
-		printf("pa\n");
+		write(1, "pa\n", 3);
 }
 
 void	pb(t_stack_node **b, t_stack_node **a, t_bool print)
 {
 	push(b, a);
 	if (!print)
-		printf("pb\n");
+		write(1, "pb\n", 3);
 }
