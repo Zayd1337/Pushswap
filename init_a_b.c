@@ -6,7 +6,7 @@
 /*   By: zait-hmi <zait-hmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:07:15 by zait-hmi          #+#    #+#             */
-/*   Updated: 2025/04/07 20:35:34 by zait-hmi         ###   ########.fr       */
+/*   Updated: 2025/04/07 21:54:45 by zait-hmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ static void	set_target_a(t_stack_node *a, t_stack_node *b)
 			a->target_node = target_node;
 		a = a->next;
 	}
-	printf("Target nodes for stack A have been set.\n");
 }
 
 static void	cost_analysis_a(t_stack_node *a, t_stack_node *b)
@@ -80,7 +79,6 @@ static void	cost_analysis_a(t_stack_node *a, t_stack_node *b)
 			a->push_cost += len_b - (a->target_node->index);
 		a = a->next;
 	}
-	printf("Push costs for stack A have been calculated.\n");
 }
 
 void	set_cheapest(t_stack_node *stack)
@@ -101,7 +99,6 @@ void	set_cheapest(t_stack_node *stack)
 		stack = stack->next;
 	}
 	cheapest_node->cheapest = TRUE;
-	printf("Cheapest node identified with cost %ld.\n", cheapest_value);
 }
 
 void	init_nodes_a(t_stack_node *a, t_stack_node *b)

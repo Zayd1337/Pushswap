@@ -6,7 +6,7 @@
 /*   By: zait-hmi <zait-hmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:07:07 by zait-hmi          #+#    #+#             */
-/*   Updated: 2025/04/07 20:35:33 by zait-hmi         ###   ########.fr       */
+/*   Updated: 2025/04/07 21:54:33 by zait-hmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void	free_stack(t_stack_node **stack)
 
 void	free_errors(t_stack_node **stack, char ***split_res)
 {
-	printf("Error encountered. Cleaning up resources.\n");
 	free_stack(stack);
 	if (split_res && *split_res)
 		free_split_result(*split_res);

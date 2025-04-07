@@ -6,7 +6,7 @@
 /*   By: zait-hmi <zait-hmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:07:18 by zait-hmi          #+#    #+#             */
-/*   Updated: 2025/04/07 20:35:34 by zait-hmi         ###   ########.fr       */
+/*   Updated: 2025/04/07 21:54:47 by zait-hmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ static void	set_target_b(t_stack_node *a, t_stack_node *b)
 			b->target_node = target_node;
 		b = b->next;
 	}
-	printf("Target nodes for stack B have been set.\n");
 }
 
 void	init_nodes_b(t_stack_node *a, t_stack_node *b)

@@ -6,7 +6,7 @@
 /*   By: zait-hmi <zait-hmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 20:18:38 by zait-hmi          #+#    #+#             */
-/*   Updated: 2025/04/07 20:35:34 by zait-hmi         ###   ########.fr       */
+/*   Updated: 2025/04/07 21:55:06 by zait-hmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ static void	push(t_stack_node **dst, t_stack_node **src)
 
 	if (!*src)
 	{
-		printf("Push skipped: Source stack is empty.\n");
 		return ;
 	}
 	push_node = *src;
@@ -37,7 +36,6 @@ static void	push(t_stack_node **dst, t_stack_node **src)
 		push_node->next->prev = push_node;
 		*dst = push_node;
 	}
-	printf("Pushed element %d to destination stack.\n", (*dst)->nbr);
 }
 
 void	pa(t_stack_node **a, t_stack_node **b, t_bool print)
